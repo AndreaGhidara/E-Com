@@ -1,0 +1,10 @@
+[
+    {
+        "id": "0",
+        "name": "nome",
+        "typeClothing": "t-shirt",
+        "colors": "['red','blue']",
+        "price" : "150€",
+        "size" : "xl"
+    }
+] 
