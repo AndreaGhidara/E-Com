@@ -1,9 +1,10 @@
 'use client'
 
 import { CloseOutlined, SettingOutlined, UserOutlined } from "@ant-design/icons";
-import { Avatar, Dropdown, MenuProps, Space, Spin } from "antd";
+import { Avatar, Button, Dropdown, MenuProps, Space, Spin } from "antd";
 import Link from "next/link";
 import { useUser } from '@auth0/nextjs-auth0/client';
+
 
 // export interface UserProfile {
 //     email: string;
@@ -21,7 +22,6 @@ import { useUser } from '@auth0/nextjs-auth0/client';
 export default function UserMenu() {
 
     const { user, error, isLoading } = useUser();
-
     const items: MenuProps['items'] = [
         {
             key: '1',
@@ -42,7 +42,11 @@ export default function UserMenu() {
         },
         {
             key: '3',
-            label: 'Settings',
+            label: (
+                <Button>
+                    Setting
+                </Button>
+            ),
             icon: <SettingOutlined />,
         },
         {
