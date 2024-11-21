@@ -55,9 +55,9 @@ export default function UserMenu() {
         {
             key: '4',
             label: (
-                <Link href="/api/auth/logout">
+                <a href="/api/auth/logout">
                     Logout
-                </Link>
+                </a>
             ),
             icon: <CloseOutlined />,
         }
