@@ -3,19 +3,12 @@ import React from 'react'
 
 const partnersAffiliate = ['Versace', 'Zara', 'Gucci', 'Prada', 'Calvin Klain']
 
-const partnersStyle: React.CSSProperties = {
-    width: '83%',
-    margin: 'auto',
-    padding: '20px 0px',
-}
-
-
 export default function Partners() {
     return (
-        <div className='bg-black text-white'>
-            <Flex wrap align='center' style={partnersStyle} gap="small">
+        <div className='bg-black text-white py-10'>
+            <Flex wrap justify='space-around' align='center' className='container containerSpace py-5' gap="small">
                 {partnersAffiliate.map((partner, index) => (
-                    <div key={index}>
+                    <div className='text-[20px]' key={index}>
                         {partner}
                     </div>
                 ))}

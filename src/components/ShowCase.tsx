@@ -1,52 +1,60 @@
 'use client'
 
-import { Flex } from "antd";
-import { Col, Row } from 'antd';
+import { Divider, Flex } from "antd";
 import { Button } from "antd";
-import { Card } from 'antd';
-import UtilCard from "./utils/UtilCard";
-const { Meta } = Card;
-import useEmblaCarousel from 'embla-carousel-react'
+import { EmblaOptionsType } from 'embla-carousel'
+import ShowCaseCarousel from "./carousels/ShowCaseCarousel";
+import NewArivalsData from '@/data/products.json';
+import TopSellingData from '@/data/topSelling.json';
 
-
-const styleShowCase: React.CSSProperties = {
-    width: '83%',
-    margin: 'auto',
-    padding: '20px 0px',
-};
+interface ClothingItem {
+    id: string;
+    name: string;
+    typeClothing: string;
+    colors: string;
+    price: string;
+    size: string;
+    img: string;
+    review: number;
+}
 
 export default function ShowCase() {
 
-    const [emblaRef] = useEmblaCarousel()
 
+    const OPTIONS: EmblaOptionsType = { slidesToScroll: 'auto' }
+    const NEWARIVALS: ClothingItem[] = NewArivalsData;
+    const TOPSELLING: ClothingItem[] = TopSellingData;
 
     return (
-        <Flex style={styleShowCase} gap="middle" vertical>
+        <Flex className="container containerSpace py-10" gap="middle" vertical>
             <div className="flex justify-center items-center">
                 <h1 className="text-3xl font-bold">
                     NEW ARRIVALS
                 </h1>
             </div>
-            <Row justify={"center"}>
-                <Col span={6}>
-                    <UtilCard />
-                </Col>
-                <Col span={6}>
-                    <UtilCard />
-                </Col>
-                <Col span={6}>
-                    <UtilCard />
-                </Col>
-                <Col span={6}>
-                    <UtilCard />
-                </Col>
-            </Row>
+            <div>
+                <ShowCaseCarousel slides={NEWARIVALS} options={OPTIONS} />
+            </div>
             <Flex justify="center">
-                <Button className=" w-32 " color="default" variant="outlined">
+                <Button className=" w-32 " color="default" variant="outlined" shape="round">
+                    View All
+                </Button>
+            </Flex>
+            <Divider />
+            <div className="flex justify-center items-center">
+                <h1 className="text-3xl font-bold">
+                    TOP SELLING
+                </h1>
+            </div>
+            <div>
+                <ShowCaseCarousel slides={TOPSELLING} options={OPTIONS} />
+            </div>
+            <Flex justify="center">
+                <Button className=" w-32 " color="default" variant="outlined" shape="round">
                     View All
                 </Button>
             </Flex>
         </Flex>
-        
+
     )
 }

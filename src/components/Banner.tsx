@@ -1,28 +1,45 @@
+'use client'
+
 import Link from 'next/link'
-import React from 'react'
-import { Flex } from "antd";
-
-
-const baseStyle: React.CSSProperties = {
-    width: '83%',
-    height: 38,
-    margin: 'auto',
-};
+import React, { useState } from 'react'
+import { Col, Flex, Row } from "antd";
+import { CloseOutlined } from '@ant-design/icons';
 
 export default function Banner() {
-    return (
-        <div className='bg-black text-white'>
-            <Flex style={baseStyle} justify='space-between' align='center'>
-                <div>
 
-                </div>
-                <p className='text-[8px] sm:text-sm'>
-                    Sign up and get 20% off to your first order. <Link className=' text-[10px] sm:text-base underline' href="#"> Sign Up Now </Link>
-                </p>
-                <p className='text-[10px] sm:text-sm'>
-                    X
-                </p>
-            </Flex>
+    const [isVisible, setIsVisible] = useState(true);
+
+    if (!isVisible) {
+        return (
+            <div>
+
+            </div>
+        )
+    }
+
+    return (
+        <div className=' bg-black text-white lg:py-1 leading-5'>
+            <Row className='container containerSpace py-2'> 
+                <Col xs={0} lg={8}>
+                    <div className='hidden xl:block'>
+
+                    </div>
+                </Col>
+                <Col xs={24} lg={8}>
+                    <Flex className='h-full' justify='center' align='center'>
+                        <p className='text-[9px] sm:text-sm font-[Satoshi] '>
+                            Sign up and get 20% off to your first order. <Link className='underline text-white ' href="#"> Sign Up Now </Link>
+                        </p>
+                    </Flex>
+                </Col>
+                <Col xs={0} lg={8}>
+                    <Flex className='hidden xl:flex justify-end'>
+                        <div className='text-[10px] sm:text-sm text-white bg-transparent cursor-pointer' onClick={() => setIsVisible(false)}>
+                            <CloseOutlined />
+                        </div>
+                    </Flex>
+                </Col>
+            </Row>
         </div>
     )
 }

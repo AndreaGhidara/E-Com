@@ -4,14 +4,9 @@ import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import StoreProvider from "@/stores/StoreProvider";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const IntegralCFBold = localFont({
+  src: "./fonts/Integral-CF-Regular.woff",
+  variable: "--font-integral-cf-regular",
   weight: "100 900",
 });
 
@@ -28,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${IntegralCFBold.variable} antialiased`}
       >
         <AntdRegistry>
           <StoreProvider>

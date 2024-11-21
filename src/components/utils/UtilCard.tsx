@@ -1,18 +1,17 @@
 'use client'
 
-import { Card, Flex } from 'antd'
-const { Meta } = Card;
+import { Flex } from 'antd'
 import React from 'react'
 import { Rate } from "antd";
 
 export default function UtilCard() {
     return (
         <Flex vertical justify='center' align='center'>
-            <div className='w-[150px] h-[150px] bg-blue-400 rounded-xl'>
+            <div className='w-[150px] h-[200px] lg:w-[240px] lg:h-[298px] xl:w-full xl:h-[298px] bg-blue-400 rounded-xl'>
 
             </div>
-            <Flex vertical gap={3} className='pt-3'>
-                <h3 className='text-[10px] font-bold'>T-SHIRT WITH TAPE DETAILS</h3>
+            <Flex vertical gap={3} className='pt-3 w-full'>
+                <h3 className='text-sm font-bold'>T-SHIRT WITH TAPE DETAILS</h3>
                 <div>
                     <Rate style={{ fontSize: 15 }} disabled defaultValue={2} />
                 </div>

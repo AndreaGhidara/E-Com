@@ -1,26 +1,27 @@
 import Banner from "@/components/Banner";
-import CarouselReviews from "@/components/CarouselReviews";
+import CarouselReviews from "@/components/carousels/CarouselReviews";
 import Categories from "@/components/Categories";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Partners from "@/components/Partners";
 import ShowCase from "@/components/ShowCase";
+import { Flex } from "antd";
 
 
 export default function Home() {
   return (
-    <div>
-      <Banner />
-      <Navbar />
+    <Flex vertical gap={20}>
+      <header className="w-full flex flex-col gap-5">
+        <Banner />
+        <Navbar />
+      </header>
       <Hero />
-      <Partners />
-      {/* <ShowCase /> */}
-      {/* <ShowCase /> */}
-      {/* <Categories /> */}
+      <ShowCase />
+      <Categories />
       <CarouselReviews />
-      {/* <Footer /> */}
-
-    </div>
+      <footer>
+        <Footer />
+      </footer>
+    </Flex>
   );
 }

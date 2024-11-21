@@ -1,13 +1,9 @@
-import { MenuOutlined, SearchOutlined, ShoppingCartOutlined } from "@ant-design/icons";
-import { Button, Flex } from "antd";
+import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { Button, Col, Flex, Row } from "antd";
 import UserAuth from "./UserAuth";
+import Nav from "./Nav";
+import Search from "./Search";
 
-const navStyle: React.CSSProperties = {
-    width: '83%',
-    height: 40,
-    margin: 'auto',
-    fontWeight: 800
-};
 
 const iconStyle: React.CSSProperties = {
     fontSize: '18px',
@@ -15,26 +11,30 @@ const iconStyle: React.CSSProperties = {
 
 export default function Navbar() {
     return (
-        <nav>
-            <Flex style={navStyle} justify="space-between" align="center">
-                <Flex gap="small" align="center">
-                    
-                    <Button shape="circle">
-                        <MenuOutlined style={iconStyle} />
-                    </Button>
-                    <h2 className="uppercase ">SHOP.CO</h2>
-                </Flex>
-                <Flex gap="small">
-                    <Button shape="circle">
-                        <SearchOutlined style={iconStyle} />
-                    </Button>
-                    <Button shape="circle">
-                        <ShoppingCartOutlined style={iconStyle} />
-                    </Button>
-                    <UserAuth />
-                    
-                </Flex>
-            </Flex>
+        <nav className="container containerSpace">
+            <Row  align="middle">
+                <Col xs={12} lg={3} >
+                    <Flex className="w-full h-full" gap="small" align="center">
+                        <div className="lg:hidden flex align-center">
+                            <Button shape="circle">
+                                <MenuOutlined style={iconStyle} />
+                            </Button>
+                        </div>
+                        <h2 className="uppercase text-xl xl:text-3xl">SHOP.CO</h2>
+                    </Flex>
+                </Col>
+
+                <Col xs={12} lg={21} >
+                    <Flex className="w-full" gap="small" justify="end" align="center">
+                        <Nav />
+                        <Search />
+                        <Button shape="circle">
+                            <ShoppingCartOutlined style={iconStyle} />
+                        </Button>
+                        <UserAuth />
+                    </Flex>
+                </Col>
+            </Row>
         </nav>
     )
 }

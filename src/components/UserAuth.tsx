@@ -2,6 +2,7 @@ import { Button } from 'antd'
 import Link from 'next/link'
 import { getSession } from '@auth0/nextjs-auth0'
 import UserMenu from './UserMenu'
+import { UserOutlined } from '@ant-design/icons'
 
 
 export default async function UserAuth() {
@@ -19,9 +20,9 @@ export default async function UserAuth() {
 
     return (
         <div>
-            <Button>
+            <Button shape="circle">
                 <Link href="/api/auth/login">
-                    Login
+                    <UserOutlined />
                 </Link>
             </Button>
         </div>
