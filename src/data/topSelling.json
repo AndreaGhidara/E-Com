@@ -1,0 +1,102 @@
+[
+    {
+        "id": "10",
+        "name": "light summer",
+        "typeClothing": "Shorts",
+        "colors": "['orange','white']",
+        "price": "80€",
+        "size": "M",
+        "img": "",
+        "review": 4.1
+    },
+    {
+        "id": "11",
+        "name": "chill hoodie",
+        "typeClothing": "Hoodie",
+        "colors": "['green','brown']",
+        "price": "240€",
+        "size": "S",
+        "img": "",
+        "review": 5.0
+    },
+    {
+        "id": "12",
+        "name": "daily wear",
+        "typeClothing": "T-shirt",
+        "colors": "['blue','white']",
+        "price": "120€",
+        "size": "L",
+        "img": "",
+        "review": 3.9
+    },
+    {
+        "id": "13",
+        "name": "rugged",
+        "typeClothing": "Jeans",
+        "colors": "['blue','light gray']",
+        "price": "200€",
+        "size": "M",
+        "img": "",
+        "review": 4.3
+    },
+    {
+        "id": "14",
+        "name": "weekend casual",
+        "typeClothing": "Shirt",
+        "colors": "['pink','beige']",
+        "price": "140€",
+        "size": "S",
+        "img": "",
+        "review": 4.0
+    },
+    {
+        "id": "15",
+        "name": "beach shorts",
+        "typeClothing": "Shorts",
+        "colors": "['teal','aqua']",
+        "price": "90€",
+        "size": "XL",
+        "img": "",
+        "review": 4.7
+    },
+    {
+        "id": "16",
+        "name": "graphic tee",
+        "typeClothing": "T-shirt",
+        "colors": "['black','yellow']",
+        "price": "110€",
+        "size": "M",
+        "img": "",
+        "review": 3.4
+    },
+    {
+        "id": "17",
+        "name": "cozy hoodie",
+        "typeClothing": "Hoodie",
+        "colors": "['cream','brown']",
+        "price": "250€",
+        "size": "L",
+        "img": "",
+        "review": 4.5
+    },
+    {
+        "id": "18",
+        "name": "urban denim",
+        "typeClothing": "Jeans",
+        "colors": "['dark blue','black']",
+        "price": "230€",
+        "size": "XL",
+        "img": "",
+        "review": 4.8
+    },
+    {
+        "id": "19",
+        "name": "smart casual",
+        "typeClothing": "Shirt",
+        "colors": "['white','navy']",
+        "price": "170€",
+        "size": "L",
+        "img": "",
+        "review": 4.2
+    }
+]

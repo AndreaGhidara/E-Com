@@ -2,9 +2,101 @@
     {
         "id": "0",
         "name": "nome",
-        "typeClothing": "t-shirt",
+        "typeClothing": "T-shirt",
         "colors": "['red','blue']",
-        "price" : "150€",
-        "size" : "xl"
+        "price": "150€",
+        "size": "XL",
+        "img": "",
+        "review": 4.5
+    },
+    {
+        "id": "1",
+        "name": "classic",
+        "typeClothing": "Hoodie",
+        "colors": "['black','gray']",
+        "price": "200€",
+        "size": "L",
+        "img": "",
+        "review": 3.5
+    },
+    {
+        "id": "2",
+        "name": "summer vibes",
+        "typeClothing": "Shorts",
+        "colors": "['yellow','green']",
+        "price": "100€",
+        "size": "M",
+        "img": "",
+        "review": 4.0
+    },
+    {
+        "id": "3",
+        "name": "denim classic",
+        "typeClothing": "Jeans",
+        "colors": "['blue','dark blue']",
+        "price": "180€",
+        "size": "L",
+        "img": "",
+        "review": 4.8
+    },
+    {
+        "id": "4",
+        "name": "formal",
+        "typeClothing": "Shirt",
+        "colors": "['white','light blue']",
+        "price": "130€",
+        "size": "M",
+        "img": "",
+        "review": 3.0
+    },
+    {
+        "id": "5",
+        "name": "sporty",
+        "typeClothing": "Shorts",
+        "colors": "['red','black']",
+        "price": "90€",
+        "size": "S",
+        "img": "",
+        "review": 4.2
+    },
+    {
+        "id": "6",
+        "name": "warm hoodie",
+        "typeClothing": "Hoodie",
+        "colors": "['navy','black']",
+        "price": "220€",
+        "size": "XL",
+        "img": "",
+        "review": 4.9
+    },
+    {
+        "id": "7",
+        "name": "casual",
+        "typeClothing": "T-shirt",
+        "colors": "['gray','green']",
+        "price": "70€",
+        "size": "M",
+        "img": "",
+        "review": 3.7
+    },
+    {
+        "id": "8",
+        "name": "cool denim",
+        "typeClothing": "Jeans",
+        "colors": "['black','gray']",
+        "price": "210€",
+        "size": "XL",
+        "img": "",
+        "review": 4.6
+    },
+    {
+        "id": "9",
+        "name": "office wear",
+        "typeClothing": "Shirt",
+        "colors": "['blue','white']",
+        "price": "160€",
+        "size": "L",
+        "img": "",
+        "review": 3.8
     }
-] 
+]
