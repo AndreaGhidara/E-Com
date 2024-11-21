@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import '@/style/carousel.css';
+@import '@/style/satoshi.css';
+@import '@/style/integralCFfont.css';
 
 :root {
   --background: #ffffff;
@@ -19,11 +21,30 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Integral-CF, sans-serif;
+}
+
+html {
+  font-family: Integral-CF, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Integral-CF, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .containerSpace {
+    @apply px-2 lg:mx-auto lg:px-4
   }
 }
