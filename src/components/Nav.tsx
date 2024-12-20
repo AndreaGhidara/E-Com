@@ -9,18 +9,19 @@ import { Dropdown, Space } from 'antd';
 
 const items: MenuProps['items'] = [
     {
-        label: <a href="https://www.antgroup.com">1st menu item</a>,
+        label: <a className="px-3" href="/casual">Casual</a>,
         key: '0',
     },
     {
-        label: <a href="https://www.aliyun.com">2nd menu item</a>,
+        label: <a className="px-3" href="/Formal">Formal</a>,
         key: '1',
     },
     {
-        type: 'divider',
+        label: <a className="px-3" href="/Party">Party</a>,
+        key: '2',
     },
     {
-        label: '3rd menu item',
+        label: <a className="px-3" href="/Gym">Gym</a>,
         key: '3',
     },
 ];
@@ -31,7 +32,7 @@ export default function Nav() {
             <ul className="w-full hidden lg:flex lg:justify-around items-center ">
                 <li>
                     <Dropdown menu={{ items }} trigger={['click']}>
-                        <a onClick={(e) => e.preventDefault()}>
+                        <a  onClick={(e) => e.preventDefault()}>
                             <Space className="text-gray-500">
                                 Shop
                                 <DownOutlined />
@@ -50,7 +51,7 @@ export default function Nav() {
                     </Link>
                 </li>
                 <li>
-                    <Link className="text-gray-500" href="/">
+                    <Link className="text-gray-500" href="/products">
                         Brends
                     </Link>
                 </li>

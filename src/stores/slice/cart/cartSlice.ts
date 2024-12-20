@@ -1,35 +1,44 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
+interface Product {
+    id: string;
+    name: string;
+    description: string;
+    typeClothing: string;
+    colors: string;
+    price: string;
+    size: string;
+    img: string;
+    review: number;
+    // Aggiungere quantita di magazzino
+    // quantity: number;
+    // total: number;
+}
+
+
 export interface CartState {
-    value: number
+    product: Product[];
 }
 
 const initialState: CartState = {
-    value: 0,
+    product: [],
 }
 
-export const counterSlice = createSlice({
-    name: 'counter',
+export const cartSlice = createSlice({
+    name: 'cart',
     initialState,
     reducers: {
-        increment: (state) => {
-            // Redux Toolkit allows us to write "mutating" logic in reducers. It
-            // doesn't actually mutate the state because it uses the Immer library,
-            // which detects changes to a "draft state" and produces a brand new
-            // immutable state based off those changes
-            state.value += 1
+        addToCart: (state, action: PayloadAction<Product>) => {
+            state.product.push(action.payload);
         },
-        decrement: (state) => {
-            state.value -= 1
-        },
-        incrementByAmount: (state, action: PayloadAction<number>) => {
-            state.value += action.payload
-        },
+        removeToCart: (state, action: PayloadAction<Product>) => {
+            state.product = state.product.filter((item) => item.id !== action.payload.id);
+        }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { addToCart, removeToCart } = cartSlice.actions
 
-export default counterSlice.reducer
+export default cartSlice.reducer

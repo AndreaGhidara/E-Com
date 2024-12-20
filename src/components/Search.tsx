@@ -11,9 +11,7 @@ export default function Search() {
                 </Flex>
             </div>
             <div className="lg:hidden flex justify-end">
-                <Button shape="circle">
-                    <SearchOutlined style={{ fontSize: '18px' }} />
-                </Button>
+                <Button style={{ border: 'none', boxShadow: 'none' }} icon={<SearchOutlined />} />
             </div>
         </div>
     )

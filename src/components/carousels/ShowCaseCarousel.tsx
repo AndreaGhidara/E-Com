@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -22,7 +24,6 @@ type PropType = {
 const ShowCaseCarousel: React.FC<PropType> = (props) => {
     const { slides, options } = props
     const [emblaRef] = useEmblaCarousel(options)
-
 
     return (
         <section className="embla">

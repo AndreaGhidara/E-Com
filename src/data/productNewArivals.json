@@ -1,18 +1,13 @@
 [
     {
         "id": "0",
-        "name": "One Life Graphic T-shirt",
-        "typeClothing": "T-shirts",
-        "colors": "['green', 'black']",
+        "name": "nome",
+        "typeClothing": "T-shirt",
+        "colors": "['red','blue']",
         "price": "150€",
-        "discount": "5",
-        "size": "Large",
+        "size": "XL",
         "img": "",
-        "review": 4.5,
-        "storeQuantity": "50",
-        "isNewProduct": "false",
-        "createDate": "2024-12-05",
-        "sex": "Unisex"
+        "review": 4.5
     },
     {
         "id": "1",

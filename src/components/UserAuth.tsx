@@ -17,12 +17,10 @@ export default function UserAuth() {
     }
 
     return (
-        <div>
-            <Button shape="circle">
-                <a href="/api/auth/login">
-                    <UserOutlined />
-                </a>
+        <a href="/api/auth/login">
+            <Button style={{ border: 'none', boxShadow: 'none' }} >
+                <UserOutlined />
             </Button>
-        </div>
+        </a>
     );
 }
